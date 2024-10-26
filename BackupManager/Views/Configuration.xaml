@@ -6,10 +6,37 @@
         xmlns:local="clr-namespace:BackupManager.Views"
         mc:Ignorable="d"
         Title="Configuration" Height="450" Width="800">
-    <StackPanel>
-        <Button Content="Adicionar jogo" Command="{Binding ExecuteActionAddGame}" />
-        <ListView 
-             x:Name="ListGamesView"
-                 ItemsSource="{Binding Games.Name}" />
+
+    <StackPanel Margin="15">
+        <Button Content="Adicionar Novo Jogo" Command="{Binding AddGameCommand}" Margin="0,0,0,0" HorizontalAlignment="Left"/>
+
+        <!-- Nome do Jogo -->
+        <StackPanel Orientation="Vertical" Margin="0,0,0,10">
+            <Label Content="Nome do Jogo:" HorizontalAlignment="Left"/>
+            <TextBox Text="{Binding NewName, UpdateSourceTrigger=PropertyChanged}" Width="150" HorizontalAlignment="Left"/>
+        </StackPanel>
+
+        <!-- Caminho do Jogo -->
+        <StackPanel Orientation="Vertical" Margin="0,0,0,10">
+            <Label Content="Caminho do Jogo:"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Text="{Binding NewGamePath, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" Width="300"/>
+                <Button Content="Selecionar Caminho" Command="{Binding SelectGamePathCommand}" Margin="5,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Label Content="Jogos adicionados"/>
+        <!-- Lista de Jogos -->
+        <ListBox ItemsSource="{Binding Games}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Name}" />
+                        <TextBlock Text=" - " />
+                        <TextBlock Text="{Binding Path}" Margin="0,0,0,10"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </StackPanel>
 </Window>

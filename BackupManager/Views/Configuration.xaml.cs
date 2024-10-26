@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BackupManager.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,10 @@ namespace BackupManager.Views
         public Configuration()
         {
             InitializeComponent();
+        }
+        public Configuration(ConfigurationViewModel viewModel) : this()
+        {
+            DataContext = viewModel;
         }
     }
 }
