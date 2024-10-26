@@ -20,8 +20,10 @@ namespace BackupManager.Configuration
 
         private void ContainerFactory(IServiceCollection services)
         {
-            services.AddTransient<MainWindow>();
+            services.AddTransient<Views.MainWindow>();
+            services.AddTransient<Views.Configuration>();
             services.AddSingleton<MainWindowViewModel>();
+            services.AddSingleton<ConfigurationViewModel>();
         }
 
         public IServiceProvider ServiceBuild()

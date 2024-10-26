@@ -47,3 +47,5 @@ C:\Users\miche\Documents\Meus Programas\MeusProjetos\BackupManager\BackupManager
 C:\Users\miche\Documents\Meus Programas\MeusProjetos\BackupManager\BackupManager\obj\Debug\net8.0-windows\BackupManager.pdb
 C:\Users\miche\Documents\Meus Programas\MeusProjetos\BackupManager\BackupManager\obj\Debug\net8.0-windows\BackupManager.genruntimeconfig.cache
 C:\Users\miche\Documents\Meus Programas\MeusProjetos\BackupManager\BackupManager\obj\Debug\net8.0-windows\ref\BackupManager.dll
+C:\Users\miche\Documents\Meus Programas\MeusProjetos\BackupManager\BackupManager\obj\Debug\net8.0-windows\Views\Configuration.g.cs
+C:\Users\miche\Documents\Meus Programas\MeusProjetos\BackupManager\BackupManager\obj\Debug\net8.0-windows\Views\Configuration.baml
