@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="BackupManager.Views.MainPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BackupManager.Views"
+        mc:Ignorable="d"
+        Height="450" Width="800">
+
+    <StackPanel>
+        <Frame Name="mainFrame" NavigationUIVisibility="Hidden"/>
+        <Button Content="Abrir Configurações" Command="{Binding AbrirConfiguracoesCommand}" />
+        <Button Content="Executar Ação" Command="{Binding ExecutarAcaoCommand}" />
+    </StackPanel>
+</UserControl>

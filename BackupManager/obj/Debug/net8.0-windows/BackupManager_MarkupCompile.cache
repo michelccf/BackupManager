@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\miche\Documents\Meus Programas\MeusProjetos\BackupManager\BackupManager\App.xaml
-21584456961
+3595005406
 
-14127978343
+16491624628
 203867209953
-Views\Configuration.xaml;Views\MainWindow.xaml;
+Views\Configuration.xaml;Views\MainPanel.xaml;Views\MainWindow.xaml;
 
 False
 

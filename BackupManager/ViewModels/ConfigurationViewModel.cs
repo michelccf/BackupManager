@@ -31,7 +31,6 @@ namespace BackupManager.ViewModels
         public ICommand ReturnCommand { get; set; }
         public ICommand DeleteIndexCommand { get; set; }
 
-        private readonly IServiceProvider _serviceProvider;
         private readonly INavigationService _navigationService;
 
         public ObservableCollection<Game> Games { get; set; }
@@ -82,7 +81,7 @@ namespace BackupManager.ViewModels
             }
         }
 
-        public ConfigurationViewModel(IServiceProvider serviceProvider, INavigationService navigationService)
+        public ConfigurationViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
             Games = new ObservableCollection<Game>();
@@ -91,7 +90,6 @@ namespace BackupManager.ViewModels
             SelectBackupPathCommand = new RelayCommand(ExecuteActionSelectBackupPath);
             ReturnCommand = new RelayCommand(ExecuteActionReturn);
             DeleteIndexCommand = new RelayCommand(ExecuteActionDeleteIndex);
-            _serviceProvider = serviceProvider;
             GetPropertiesFromJsonConfig();
 
         }
@@ -107,8 +105,7 @@ namespace BackupManager.ViewModels
 
         private void ExecuteActionReturn()
         {
-            //MainWindow _mainWindow = _serviceProvider.GetRequiredService<MainWindow>();
-            _navigationService.NavigateTo<MainWindow>();
+            _navigationService.NavigateTo<MainPanel>();
         }
 
         private void ExecuteActionSelectBackupPath()
@@ -172,9 +169,11 @@ namespace BackupManager.ViewModels
 
         private JsonConfig DesserializerJsonConfig()
         {
-            if (File.Exists(Constants.JsonPath)) 
-            { 
-                string json = File.ReadAllText(Constants.JsonPath);
+            string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name.Split('\\').LastOrDefault();
+            if (File.Exists(Constants.JsonPath.Replace("%User%", userName))) 
+            {
+                
+                string json = File.ReadAllText(Constants.JsonPath.Replace("%User%", userName));
 
                 JsonConfig objeto = JsonConvert.DeserializeObject<JsonConfig>(json);
                 return objeto;
@@ -191,8 +190,10 @@ namespace BackupManager.ViewModels
             jsonConfig.BackupPath = NewBackupPath;
             string json = JsonConvert.SerializeObject(jsonConfig, Formatting.Indented);
 
+            string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name.Split('\\').LastOrDefault();
+
             // Salva o JSON em um arquivo
-            File.WriteAllText(Constants.JsonPath, json);
+            File.WriteAllText(Constants.JsonPath.Replace("%User%", userName), json);
         }
 
         protected virtual void OnPropertyChanged(string propertyName)

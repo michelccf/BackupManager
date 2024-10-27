@@ -24,8 +24,10 @@ namespace BackupManager.Configuration
             services.AddSingleton<INavigationService, NavigationService>();
             services.AddTransient<Views.MainWindow>();
             services.AddTransient<Views.Configuration>();
+            services.AddTransient<Views.MainPanel>();
             services.AddSingleton<MainWindowViewModel>();
             services.AddSingleton<ConfigurationViewModel>();
+            services.AddSingleton<MainPanelViewModel>();
         }
 
         public IServiceProvider ServiceBuild()

@@ -16,7 +16,7 @@ namespace BackupManager.Views
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : UserControl
+    public partial class MainWindow : Window
     {
         private readonly INavigationService _navigationService;
         public MainWindow()

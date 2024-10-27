@@ -19,9 +19,9 @@ namespace BackupManager
             ConfigurationManager config = new ConfigurationManager();
             ServiceProvider = config.ServiceBuild();
 
-            var mainWindow = ServiceProvider.GetRequiredService<INavigationService>();
-            mainWindow.SetCurrentWindow(MainWindow);
-            mainWindow.NavigateTo<MainWindow>();
+            var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
+            //mainWindow.SetCurrentWindow(MainWindow);
+            mainWindow.Show();
         }
     }
 }

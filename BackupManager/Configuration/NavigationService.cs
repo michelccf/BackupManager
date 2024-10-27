@@ -1,4 +1,5 @@
 ﻿using BackupManager.Configuration.Interfaces;
+using BackupManager.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -15,10 +16,16 @@ namespace BackupManager.Configuration
     {
         private readonly IServiceProvider _serviceProvider;
         private Window _currentWindow;
+        private MainWindowViewModel _mainViewModel;
 
         public NavigationService(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
+        }
+
+        public void SetMainViewModel(MainWindowViewModel mainViewModel) 
+        {
+            _mainViewModel = mainViewModel;
         }
 
         public void SetCurrentWindow(Window currentWindow)
@@ -28,8 +35,7 @@ namespace BackupManager.Configuration
 
         public void NavigateTo<T>() where T : UserControl
         {
-            var newWindow = _serviceProvider.GetRequiredService<T>();
-            _currentWindow?.Close();
+            _mainViewModel.CurrentPage = _serviceProvider.GetRequiredService<T>();
         }
     }
 }
