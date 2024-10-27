@@ -12,6 +12,11 @@ using Microsoft.Win32;
 using System.IO;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using System.Dynamic;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using BackupManager.Views;
+using Microsoft.Extensions.DependencyInjection;
 
 
 namespace BackupManager.ViewModels
@@ -22,6 +27,9 @@ namespace BackupManager.ViewModels
         public ICommand AddGameCommand { get; }
         public ICommand SelectGamePathCommand { get; }
         public ICommand SelectBackupPathCommand { get; }
+        public ICommand ReturnCommand { get; set; }
+
+        private readonly IServiceProvider _serviceProvider;
 
         public ObservableCollection<Game> Games { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
@@ -60,22 +68,33 @@ namespace BackupManager.ViewModels
             }
         }
 
-        public ConfigurationViewModel()
+        public ConfigurationViewModel(IServiceProvider serviceProvider)
         {
             Games = new ObservableCollection<Game>();
             AddGameCommand = new RelayCommand(ExecuteActionAddGame);
             SelectGamePathCommand = new RelayCommand(ExecuteActionSelectGamePath);
             SelectBackupPathCommand = new RelayCommand(ExecuteActionSelectBackupPath);
+            ReturnCommand = new RelayCommand(ExecuteActionReturn);
+            _serviceProvider = serviceProvider;
+            GetPropertiesFromJsonConfig();
+
+        }
+
+        private void ExecuteActionReturn()
+        {
+            MainWindow _mainWindow = _serviceProvider.GetRequiredService<MainWindow>();
+            _mainWindow.Show();
         }
 
         private void ExecuteActionSelectBackupPath()
         {
-            throw new NotImplementedException();
+                NewBackupPath = OpenFileDialog();
+                GenerateJson();
         }
 
         public void ExecuteActionAddGame()
         {
-            if(NewName == string.Empty || NewGamePath == string.Empty)
+            if(string.IsNullOrEmpty(NewName)  || string.IsNullOrEmpty(NewGamePath))
              return; 
 
             Game x = new Game();
@@ -85,15 +104,20 @@ namespace BackupManager.ViewModels
 
             NewName = string.Empty;
             NewGamePath = string.Empty;
+            GenerateJson();
         }
 
         public void ExecuteActionSelectGamePath()
+        {
+            NewGamePath = OpenFileDialog();
+        }
+
+        private string OpenFileDialog()
         {
             var dlg = new CommonOpenFileDialog();
             dlg.Title = "Selecione a pasta";
             dlg.IsFolderPicker = true;
             dlg.InitialDirectory = "C:\\";
-
             dlg.AddToMostRecentlyUsedList = false;
             dlg.AllowNonFileSystemItems = false;
             dlg.DefaultDirectory = "C:\\";
@@ -105,10 +129,47 @@ namespace BackupManager.ViewModels
             dlg.ShowPlacesList = true;
 
             if (dlg.ShowDialog() == CommonFileDialogResult.Ok)
+                return dlg.FileName;
+
+            else
+                return string.Empty;
+        }
+
+        private void GetPropertiesFromJsonConfig()
+        {
+            JsonConfig json = DesserializerJsonConfig();
+            if (json != null)
             {
-                NewGamePath = dlg.FileName;
+                Games = new ObservableCollection<Game>(json.Games);
+                NewBackupPath = json.BackupPath;
             }
         }
+
+        private JsonConfig DesserializerJsonConfig()
+        {
+            if (File.Exists(Constants.JsonPath)) 
+            { 
+                string json = File.ReadAllText(Constants.JsonPath);
+
+                JsonConfig objeto = JsonConvert.DeserializeObject<JsonConfig>(json);
+                return objeto;
+            }
+
+            return null;
+            
+        }
+
+        private void GenerateJson()
+        {
+            JsonConfig jsonConfig = new JsonConfig();
+            jsonConfig.Games = Games.ToList();
+            jsonConfig.BackupPath = NewBackupPath;
+            string json = JsonConvert.SerializeObject(jsonConfig, Formatting.Indented);
+
+            // Salva o JSON em um arquivo
+            File.WriteAllText(Constants.JsonPath, json);
+        }
+
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

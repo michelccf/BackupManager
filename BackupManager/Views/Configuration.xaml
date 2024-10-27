@@ -8,6 +8,18 @@
         Title="Configuration" Height="450" Width="800">
 
     <StackPanel Margin="15">
+        <Button Width="35" Height="35" HorizontalAlignment="right" Command="{Binding ReturnCommand}">
+            <StackPanel>
+                <Image Source="C:\Users\miche\Documents\Meus Programas\MeusProjetos\BackupManager\BackupManager\Images\93634.png" Width="30" Height="30"/>
+                <TextBlock Text="Clique Aqui" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <Button Content="Adicionar rota de backup" Command="{Binding SelectBackupPathCommand}" Margin="0,0,0,10" HorizontalAlignment="Left"/>
+        
+        <StackPanel Orientation="Vertical" Margin="0,0,0,10">
+            <TextBox Text="{Binding NewBackupPath, UpdateSourceTrigger=PropertyChanged}" Width="150" HorizontalAlignment="Left"/>
+        </StackPanel>
+        
         <Button Content="Adicionar Novo Jogo" Command="{Binding AddGameCommand}" Margin="0,0,0,0" HorizontalAlignment="Left"/>
 
         <!-- Nome do Jogo -->
