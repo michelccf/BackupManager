@@ -1,4 +1,5 @@
-﻿using BackupManager.Views;
+﻿using BackupManager.Configuration.Interfaces;
+using BackupManager.Views;
 using Microsoft.Extensions.DependencyInjection;
 using System.Configuration;
 using System.Data;
@@ -18,8 +19,9 @@ namespace BackupManager
             ConfigurationManager config = new ConfigurationManager();
             ServiceProvider = config.ServiceBuild();
 
-            var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
-            mainWindow.Show();
+            var mainWindow = ServiceProvider.GetRequiredService<INavigationService>();
+            mainWindow.SetCurrentWindow(MainWindow);
+            mainWindow.NavigateTo<MainWindow>();
         }
     }
 }

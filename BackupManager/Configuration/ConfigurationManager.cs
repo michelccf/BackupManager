@@ -1,4 +1,5 @@
-﻿using BackupManager.ViewModels;
+﻿using BackupManager.Configuration.Interfaces;
+using BackupManager.ViewModels;
 using BackupManager.Views;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -20,6 +21,7 @@ namespace BackupManager.Configuration
 
         private void ContainerFactory(IServiceCollection services)
         {
+            services.AddSingleton<INavigationService, NavigationService>();
             services.AddTransient<Views.MainWindow>();
             services.AddTransient<Views.Configuration>();
             services.AddSingleton<MainWindowViewModel>();

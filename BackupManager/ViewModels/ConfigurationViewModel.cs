@@ -17,6 +17,7 @@ using Newtonsoft.Json;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using BackupManager.Views;
 using Microsoft.Extensions.DependencyInjection;
+using BackupManager.Configuration.Interfaces;
 
 
 namespace BackupManager.ViewModels
@@ -28,8 +29,10 @@ namespace BackupManager.ViewModels
         public ICommand SelectGamePathCommand { get; }
         public ICommand SelectBackupPathCommand { get; }
         public ICommand ReturnCommand { get; set; }
+        public ICommand DeleteIndexCommand { get; set; }
 
         private readonly IServiceProvider _serviceProvider;
+        private readonly INavigationService _navigationService;
 
         public ObservableCollection<Game> Games { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
@@ -37,6 +40,7 @@ namespace BackupManager.ViewModels
         private string _newName;
         private string _newGamePath;
         private string _newBackupPath;
+        private Game _selectedGame;
 
         public string NewName
         {
@@ -68,22 +72,43 @@ namespace BackupManager.ViewModels
             }
         }
 
-        public ConfigurationViewModel(IServiceProvider serviceProvider)
+        public Game SelectedIndex
         {
+            get { return _selectedGame; }
+            set
+            {
+                _selectedGame = value;
+                OnPropertyChanged(nameof(SelectedIndex));
+            }
+        }
+
+        public ConfigurationViewModel(IServiceProvider serviceProvider, INavigationService navigationService)
+        {
+            _navigationService = navigationService;
             Games = new ObservableCollection<Game>();
             AddGameCommand = new RelayCommand(ExecuteActionAddGame);
             SelectGamePathCommand = new RelayCommand(ExecuteActionSelectGamePath);
             SelectBackupPathCommand = new RelayCommand(ExecuteActionSelectBackupPath);
             ReturnCommand = new RelayCommand(ExecuteActionReturn);
+            DeleteIndexCommand = new RelayCommand(ExecuteActionDeleteIndex);
             _serviceProvider = serviceProvider;
             GetPropertiesFromJsonConfig();
 
         }
 
+        private void ExecuteActionDeleteIndex()
+        {
+            if (SelectedIndex != null)
+            {
+                Games.Remove(SelectedIndex);
+                GenerateJson();
+            }
+        }
+
         private void ExecuteActionReturn()
         {
-            MainWindow _mainWindow = _serviceProvider.GetRequiredService<MainWindow>();
-            _mainWindow.Show();
+            //MainWindow _mainWindow = _serviceProvider.GetRequiredService<MainWindow>();
+            _navigationService.NavigateTo<MainWindow>();
         }
 
         private void ExecuteActionSelectBackupPath()

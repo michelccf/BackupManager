@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BackupManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5d0f1cdcbe631c131c558c287767358cef75a84")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ed4411b922a52781a8ab1486d7a0a86f2378a24")]
 [assembly: System.Reflection.AssemblyProductAttribute("BackupManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BackupManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

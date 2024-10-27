@@ -1,4 +1,5 @@
-﻿using BackupManager.Util;
+﻿using BackupManager.Configuration.Interfaces;
+using BackupManager.Util;
 using BackupManager.Views;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -16,15 +17,18 @@ namespace BackupManager.ViewModels
         private readonly Views.Configuration configurationView;
         
         private readonly IServiceProvider _serviceProvider;
+
+        private readonly INavigationService _navigationService;
         public ICommand AbrirConfiguracoesCommand { get; }  
         public ICommand ExecutarAcaoCommand { get; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public MainWindowViewModel(IServiceProvider serviceProvider, Views.Configuration _configurationView)
+        public MainWindowViewModel(IServiceProvider serviceProvider, INavigationService navigationService, Views.Configuration _configurationView)
         {
             _serviceProvider = serviceProvider;
             configurationView = _configurationView;
+            _navigationService = navigationService;
             AbrirConfiguracoesCommand = new RelayCommand(AbrirConfiguracoes);
             ExecutarAcaoCommand = new RelayCommand(ExecutarAcao);
         }
@@ -32,9 +36,8 @@ namespace BackupManager.ViewModels
         private void AbrirConfiguracoes()
         {
             var mainWindow = _serviceProvider.GetRequiredService<MainWindow>();
-            mainWindow.Close();
 
-            configurationView.Show();
+            _navigationService.NavigateTo<Views.Configuration>();
         }
 
         private void ExecutarAcao()

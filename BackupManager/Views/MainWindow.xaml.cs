@@ -1,4 +1,5 @@
-﻿using BackupManager.ViewModels;
+﻿using BackupManager.Configuration.Interfaces;
+using BackupManager.ViewModels;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -15,16 +16,18 @@ namespace BackupManager.Views
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : UserControl
     {
+        private readonly INavigationService _navigationService;
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        public MainWindow(MainWindowViewModel viewModel) : this()
+        public MainWindow(MainWindowViewModel viewModel, INavigationService navigationService) : this()
         {
             DataContext = viewModel;
+            _navigationService = navigationService;
         }
 
     }

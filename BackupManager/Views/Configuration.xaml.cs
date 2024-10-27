@@ -18,7 +18,7 @@ namespace BackupManager.Views
     /// <summary>
     /// Lógica interna para Configuration.xaml
     /// </summary>
-    public partial class Configuration : Window
+    public partial class Configuration : UserControl
     {
         public Configuration()
         {
