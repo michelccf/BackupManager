@@ -1,22 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using BackupManager.Models;
 using BackupManager.Util;
-using Microsoft.Win32;
 using System.IO;
 using Microsoft.WindowsAPICodePack.Dialogs;
-using System.Dynamic;
-using System.Text.Json.Serialization;
 using Newtonsoft.Json;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 using BackupManager.Views;
-using Microsoft.Extensions.DependencyInjection;
 using BackupManager.Configuration.Interfaces;
 
 

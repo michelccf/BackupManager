@@ -5,11 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BackupManager.Views"
         mc:Ignorable="d"
-        Height="450" Width="800">
+        Height="600" Width="800">
 
-    <StackPanel>
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
         <Frame Name="mainFrame" NavigationUIVisibility="Hidden"/>
-        <Button Content="Abrir Configurações" Command="{Binding AbrirConfiguracoesCommand}" />
-        <Button Content="Executar Ação" Command="{Binding ExecutarAcaoCommand}" />
+        <Button Content="Abrir Configurações" Command="{Binding AbrirConfiguracoesCommand}" Margin="0,15,0,15" Height="50" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button.BitmapEffect>
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
+            </Button.BitmapEffect>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Executar Backup" Command="{Binding ExecutarAcaoCommand}" Margin="0,15,0,15" Height="50" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button.BitmapEffect>
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
+            </Button.BitmapEffect>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </StackPanel>
 </UserControl>

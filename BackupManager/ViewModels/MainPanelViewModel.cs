@@ -1,10 +1,13 @@
 ﻿using BackupManager.Configuration.Interfaces;
+using BackupManager.Models;
 using BackupManager.Util;
 using BackupManager.Views;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,8 +40,29 @@ namespace BackupManager.ViewModels
 
         private void ExecutarAcao()
         {
-            // Lógica para executar a ação
-            Console.WriteLine("Ação executada!");
+            JsonConfig json = DesserializerJsonConfig();
+
+            if(json != null && json.Games != null)
+                for (int i = 0; i < json.Games.Count; i++)
+                {
+                    File.Copy($"{json.Games[i].Path}\\{json.Games[i]}", json.BackupPath);
+                }
+            
+        }
+        private JsonConfig DesserializerJsonConfig()
+        {
+            string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name.Split('\\').LastOrDefault();
+            if (File.Exists(Constants.JsonPath.Replace("%User%", userName)))
+            {
+
+                string json = File.ReadAllText(Constants.JsonPath.Replace("%User%", userName));
+
+                JsonConfig objeto = JsonConvert.DeserializeObject<JsonConfig>(json);
+                return objeto;
+            }
+
+            return null;
+
         }
 
         protected virtual void OnPropertyChanged(string propertyName)
