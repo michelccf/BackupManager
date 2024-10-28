@@ -15,7 +15,7 @@
                 </Style>
             </Button.Resources>
             <StackPanel>
-                <Image Source="C:\Users\miche\Documents\Meus Programas\MeusProjetos\BackupManager\BackupManager\Images\93634.png" Width="30" Height="30"/>
+                <Image Source="\Images\93634.png" Width="30" Height="30"/>
                 <TextBlock Text="Clique Aqui" HorizontalAlignment="Center"/>
             </StackPanel>
         </Button>
@@ -79,7 +79,7 @@
 
         <Label Content="Jogos adicionados"/>
         <!-- Lista de Jogos -->
-        <ListBox ItemsSource="{Binding Games}" SelectedItem="{Binding SelectedIndex}">
+        <ListBox ItemsSource="{Binding Games}" SelectedItem="{Binding SelectedIndex}" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="200" Margin="10,0,10,0">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
