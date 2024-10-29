@@ -270,7 +270,7 @@ namespace BackupManager.ViewModels
             }
             else 
             {
-
+                File.WriteAllText(Constants.JsonPath, JsonConvert.SerializeObject(jsonConfig, Formatting.Indented));
             }
         }
 
@@ -281,7 +281,7 @@ namespace BackupManager.ViewModels
 
         private void SendMessageBox(string message)
         {
-            MessageBox.Show(message, "Erro", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show(message, "Information", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

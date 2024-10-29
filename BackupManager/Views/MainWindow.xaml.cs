@@ -19,16 +19,18 @@ namespace BackupManager.Views
     public partial class MainWindow : Window
     {
         private readonly INavigationService _navigationService;
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
-
-        public MainWindow(MainWindowViewModel viewModel, INavigationService navigationService) : this()
+        public MainWindow(MainWindowViewModel viewModel, INavigationService navigationService)
         {
             DataContext = viewModel;
             _navigationService = navigationService;
+            InitializeComponent();
         }
+
+        //public MainWindow(MainWindowViewModel viewModel, INavigationService navigationService) : this()
+        //{
+        //    DataContext = viewModel;
+        //    _navigationService = navigationService;
+        //}
 
     }
 }

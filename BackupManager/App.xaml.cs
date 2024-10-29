@@ -20,8 +20,8 @@ namespace BackupManager
             ServiceProvider = config.ServiceBuild();
 
             var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
-            //mainWindow.SetCurrentWindow(MainWindow);
             mainWindow.Show();
+            //mainWindow.SetCurrentWindow(MainWindow);
         }
     }
 }
