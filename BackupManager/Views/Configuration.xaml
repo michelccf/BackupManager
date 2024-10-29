@@ -7,11 +7,38 @@
         mc:Ignorable="d"
         Height="600" Width="800">
 
+    <UserControl.Resources>
+        <Style x:Key="CustomRadioButtonStyle" TargetType="RadioButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <StackPanel Orientation="Horizontal">
+                            <Grid Width="10" Height="10">
+                                <Ellipse x:Name="OuterEllipse" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="1"/>
+                                <Ellipse x:Name="InnerEllipse" Fill="White" Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Grid>
+                            <ContentPresenter Margin="5,0,0,0" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="InnerEllipse" Property="Fill" Value="Red"/>
+                                <!-- Cor desejada -->
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="False">
+                                <Setter TargetName="InnerEllipse" Property="Fill" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
     <StackPanel Margin="15">
-        <Button Width="35" Height="35" HorizontalAlignment="right" Command="{Binding ReturnCommand}" Margin="0,0,10,0">
+        <Button Width="35" Height="35" HorizontalAlignment="right" Command="{Binding ReturnCommand}" Margin="0,0,10,0" >
             <Button.Resources>
                 <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="25"/>
+                    <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Button.Resources>
             <StackPanel>
@@ -19,25 +46,32 @@
                 <TextBlock Text="Clique Aqui" HorizontalAlignment="Center"/>
             </StackPanel>
         </Button>
-        
-        <Button Content="Adicionar rota de backup" Command="{Binding SelectBackupPathCommand}" Margin="5,0,0,10" HorizontalAlignment="Left">
-            <Button.BitmapEffect>
-                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
-            </Button.BitmapEffect>
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="8"/>
-                </Style>
-            </Button.Resources>
-        </Button>
 
-        <StackPanel Orientation="Vertical" Margin="0,-10,0,10">
-            <Border Margin="5" Padding="5" BorderThickness="1" BorderBrush="Aqua" Background="Aqua" CornerRadius="10" Width="250" HorizontalAlignment="Left">
-                <TextBox Text="{Binding NewBackupPath, UpdateSourceTrigger=PropertyChanged}" Width="250" HorizontalAlignment="Left"/>
-            </Border>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="Hora"></Label>
+            <RadioButton IsChecked="{Binding Horas}" Margin="0,5,0,0" Width="10" Height="10"  Style="{StaticResource CustomRadioButtonStyle}"></RadioButton>
+            <Label Content="Minuto"></Label>
+            <RadioButton  IsChecked="{Binding Minutos}" Margin="0,5,0,0" Width="10" Height="10" Style="{StaticResource CustomRadioButtonStyle}"></RadioButton>
+            <Label Content="Segundo"></Label>
+            <RadioButton  IsChecked="{Binding Segundos}" Margin="0,5,0,0" Width="10" Height="10" Style="{StaticResource CustomRadioButtonStyle}"></RadioButton>
         </StackPanel>
-
         
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Tempo:"></Label>
+            <Border Margin="0,0,5,0" Padding="5" BorderThickness="1" BorderBrush="Aqua" Background="Aqua" CornerRadius="10" Width="50" HorizontalAlignment="Left">
+                <TextBox Text="{Binding Tempo, UpdateSourceTrigger=PropertyChanged}" Width="50" HorizontalAlignment="Left"/>
+            </Border>
+            <Button Content="Definir" Command="{Binding DefineTimeCommand}">
+                <Button.BitmapEffect>
+                    <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
+                </Button.BitmapEffect>
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
 
         <!-- Nome do Jogo -->
         <StackPanel Orientation="Vertical" Margin="0,0,0,10">
@@ -66,6 +100,24 @@
                 </Button>
             </StackPanel>
         </StackPanel>
+        <StackPanel>
+            <Label Content="Caminho Backup:" HorizontalAlignment="Left" Margin="0,0,0,-8"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Border Margin="5" Padding="5" BorderThickness="1" BorderBrush="Aqua" Background="Aqua" CornerRadius="10" Width="300" HorizontalAlignment="Left">
+                    <TextBox Text="{Binding NewBackupPath, UpdateSourceTrigger=PropertyChanged}" Width="300" HorizontalAlignment="Left"/>
+                </Border>
+                <Button Content="Adicionar rota de backup" Command="{Binding SelectBackupPathCommand}" Margin="5,0,0,0" HorizontalAlignment="Left">
+                    <Button.BitmapEffect>
+                        <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
+                    </Button.BitmapEffect>
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+        </StackPanel>
         <Button Content="Adicionar" Command="{Binding AddGameCommand}" Margin="0,10,0,0" HorizontalAlignment="Center">
             <Button.BitmapEffect>
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
@@ -85,13 +137,15 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding Name}" />
                         <TextBlock Text=" - " />
-                        <TextBlock Text="{Binding Path}" Margin="0,0,0,10"/>
+                        <TextBlock Text="{Binding Path}" />
+                        <TextBlock Text=" >> " />
+                        <TextBlock Text="{Binding Pathbackup}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <Button Content="Deletar" Command="{Binding DeleteIndexCommand}" Margin="0,10,0,10" HorizontalAlignment="Left">
+        <Button Content="Deletar selecionado" Command="{Binding DeleteIndexCommand}" Margin="10,10,0,10" HorizontalAlignment="Left">
             <Button.BitmapEffect>
                 <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
             </Button.BitmapEffect>

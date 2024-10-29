@@ -3,40 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\util\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\util\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\viewmodels\\configurationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\viewmodels\\configurationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\configuration\\configurationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\configuration\\configurationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\views\\configuration.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\views\\configuration.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\models\\jsonconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\models\\jsonconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\views\\configuration.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\views\\configuration.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\backupmanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\backupmanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\util\\radiobuttoncheckedconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\util\\radiobuttoncheckedconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\viewmodels\\mainpanelviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\viewmodels\\mainpanelviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\util\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\util\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\configuration\\configurationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\configuration\\configurationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\util\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\util\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\backupmanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\backupmanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\util\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\util\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\views\\mainpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -47,16 +63,8 @@
       "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\configuration\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\models\\jsonconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\models\\jsonconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\views\\configuration.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\views\\configuration.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\configuration\\interfaces\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -77,10 +85,6 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\miche\\AppData\\Local\\Temp\\.vsdbgsrc\\00f9257c420475d0b9f0e9a404b60217c997df831d85c8cdcdf9214bf02ae594\\XamlReader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|c:\\users\\miche\\documents\\meus programas\\meusprojetos\\backupmanager\\backupmanager\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BCDA2596-218B-4438-8B68-0153FB27F34E}|BackupManager\\BackupManager.csproj|solutionrelative:backupmanager\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -95,7 +99,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -105,37 +109,103 @@
               "RelativeDocumentMoniker": "BackupManager\\ViewModels\\MainWindowViewModel.cs",
               "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\ViewModels\\MainWindowViewModel.cs",
               "RelativeToolTip": "BackupManager\\ViewModels\\MainWindowViewModel.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA6wB8AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAiwB8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-26T15:17:03.368Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainPanelViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\ViewModels\\MainPanelViewModel.cs",
-              "RelativeDocumentMoniker": "BackupManager\\ViewModels\\MainPanelViewModel.cs",
-              "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\ViewModels\\MainPanelViewModel.cs",
-              "RelativeToolTip": "BackupManager\\ViewModels\\MainPanelViewModel.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAcwCMAAAApAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "RadioButtonCheckedConverter.cs",
+              "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Util\\RadioButtonCheckedConverter.cs",
+              "RelativeDocumentMoniker": "BackupManager\\Util\\RadioButtonCheckedConverter.cs",
+              "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Util\\RadioButtonCheckedConverter.cs",
+              "RelativeToolTip": "BackupManager\\Util\\RadioButtonCheckedConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T21:12:32.342Z"
+              "WhenOpened": "2024-10-29T18:20:21.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Util\\Constants.cs",
+              "RelativeDocumentMoniker": "BackupManager\\Util\\Constants.cs",
+              "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Util\\Constants.cs",
+              "RelativeToolTip": "BackupManager\\Util\\Constants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T08:55:51.15Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Configuration.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Views\\Configuration.xaml.cs",
+              "RelativeDocumentMoniker": "BackupManager\\Views\\Configuration.xaml.cs",
+              "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Views\\Configuration.xaml.cs",
+              "RelativeToolTip": "BackupManager\\Views\\Configuration.xaml.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAUwBgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T22:00:33.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConfigurationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\ViewModels\\ConfigurationViewModel.cs",
+              "RelativeDocumentMoniker": "BackupManager\\ViewModels\\ConfigurationViewModel.cs",
+              "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\ViewModels\\ConfigurationViewModel.cs",
+              "RelativeToolTip": "BackupManager\\ViewModels\\ConfigurationViewModel.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAADwv4sAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T20:34:27.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "JsonConfig.cs",
+              "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Models\\JsonConfig.cs",
+              "RelativeDocumentMoniker": "BackupManager\\Models\\JsonConfig.cs",
+              "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Models\\JsonConfig.cs",
+              "RelativeToolTip": "BackupManager\\Models\\JsonConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T22:23:16.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Configuration.xaml",
               "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Views\\Configuration.xaml",
               "RelativeDocumentMoniker": "BackupManager\\Views\\Configuration.xaml",
               "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Views\\Configuration.xaml",
               "RelativeToolTip": "BackupManager\\Views\\Configuration.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-27T22:13:17.623Z"
+              "WhenOpened": "2024-10-27T22:13:17.623Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "BackupManager\\Views\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "BackupManager\\Views\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-27T22:19:40.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "BackupManager.csproj",
               "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\BackupManager.csproj",
               "RelativeDocumentMoniker": "BackupManager\\BackupManager.csproj",
@@ -147,7 +217,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Models\\Game.cs",
+              "RelativeDocumentMoniker": "BackupManager\\Models\\Game.cs",
+              "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Models\\Game.cs",
+              "RelativeToolTip": "BackupManager\\Models\\Game.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T20:37:01.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainPanelViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\ViewModels\\MainPanelViewModel.cs",
+              "RelativeDocumentMoniker": "BackupManager\\ViewModels\\MainPanelViewModel.cs",
+              "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\ViewModels\\MainPanelViewModel.cs",
+              "RelativeToolTip": "BackupManager\\ViewModels\\MainPanelViewModel.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAcwCMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T21:12:32.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ConfigurationManager.cs",
               "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Configuration\\ConfigurationManager.cs",
               "RelativeDocumentMoniker": "BackupManager\\Configuration\\ConfigurationManager.cs",
@@ -155,37 +251,12 @@
               "RelativeToolTip": "BackupManager\\Configuration\\ConfigurationManager.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T14:38:49.087Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ConfigurationViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\ViewModels\\ConfigurationViewModel.cs",
-              "RelativeDocumentMoniker": "BackupManager\\ViewModels\\ConfigurationViewModel.cs",
-              "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\ViewModels\\ConfigurationViewModel.cs",
-              "RelativeToolTip": "BackupManager\\ViewModels\\ConfigurationViewModel.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC4AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T20:34:27.273Z",
+              "WhenOpened": "2024-10-26T14:38:49.087Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Constants.cs",
-              "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Util\\Constants.cs",
-              "RelativeDocumentMoniker": "BackupManager\\Util\\Constants.cs",
-              "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Util\\Constants.cs",
-              "RelativeToolTip": "BackupManager\\Util\\Constants.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T08:55:51.15Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "MainPanel.xaml",
               "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Views\\MainPanel.xaml",
               "RelativeDocumentMoniker": "BackupManager\\Views\\MainPanel.xaml",
@@ -196,18 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Views\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "BackupManager\\Views\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Views\\MainWindow.xaml",
-              "RelativeToolTip": "BackupManager\\Views\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-27T22:19:40.774Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Util\\RelayCommand.cs",
               "RelativeDocumentMoniker": "BackupManager\\Util\\RelayCommand.cs",
@@ -219,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "NavigationService.cs",
               "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Configuration\\NavigationService.cs",
               "RelativeDocumentMoniker": "BackupManager\\Configuration\\NavigationService.cs",
@@ -231,19 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "JsonConfig.cs",
-              "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Models\\JsonConfig.cs",
-              "RelativeDocumentMoniker": "BackupManager\\Models\\JsonConfig.cs",
-              "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Models\\JsonConfig.cs",
-              "RelativeToolTip": "BackupManager\\Models\\JsonConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T22:23:16.045Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Views\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "BackupManager\\Views\\MainWindow.xaml.cs",
@@ -255,19 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Configuration.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Views\\Configuration.xaml.cs",
-              "RelativeDocumentMoniker": "BackupManager\\Views\\Configuration.xaml.cs",
-              "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Views\\Configuration.xaml.cs",
-              "RelativeToolTip": "BackupManager\\Views\\Configuration.xaml.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T22:00:33.653Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "INavigationService.cs",
               "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Configuration\\Interfaces\\INavigationService.cs",
               "RelativeDocumentMoniker": "BackupManager\\Configuration\\Interfaces\\INavigationService.cs",
@@ -279,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "MainPanel.xaml.cs",
               "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Views\\MainPanel.xaml.cs",
               "RelativeDocumentMoniker": "BackupManager\\Views\\MainPanel.xaml.cs",
@@ -291,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\App.xaml.cs",
               "RelativeDocumentMoniker": "BackupManager\\App.xaml.cs",
@@ -303,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "NavigationService.cs",
               "DocumentMoniker": "C:\\Users\\miche\\AppData\\Local\\Temp\\.vsdbgsrc\\902c0353e80b08e87ad40f528b2f5a3457a255d987ad95f480e1c596aaf7c4c7\\NavigationService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\902c0353e80b08e87ad40f528b2f5a3457a255d987ad95f480e1c596aaf7c4c7\\NavigationService.cs",
@@ -316,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "XamlReader.cs",
               "DocumentMoniker": "C:\\Users\\miche\\AppData\\Local\\Temp\\.vsdbgsrc\\00f9257c420475d0b9f0e9a404b60217c997df831d85c8cdcdf9214bf02ae594\\XamlReader.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\00f9257c420475d0b9f0e9a404b60217c997df831d85c8cdcdf9214bf02ae594\\XamlReader.cs",
@@ -328,30 +364,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Game.cs",
-              "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Models\\Game.cs",
-              "RelativeDocumentMoniker": "BackupManager\\Models\\Game.cs",
-              "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\Models\\Game.cs",
-              "RelativeToolTip": "BackupManager\\Models\\Game.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T20:37:01.229Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\App.xaml",
               "RelativeDocumentMoniker": "BackupManager\\App.xaml",
               "ToolTip": "C:\\Users\\miche\\Documents\\Meus Programas\\MeusProjetos\\BackupManager\\BackupManager\\App.xaml",
               "RelativeToolTip": "BackupManager\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-26T15:47:45.325Z"
+              "WhenOpened": "2024-10-26T15:47:45.325Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "ResourcePart.cs",
               "DocumentMoniker": "C:\\Users\\miche\\AppData\\Local\\Temp\\.vsdbgsrc\\6b2dfb9d5e4949b718ee78fa9415cabf37518e9447a2764ba224d240518b710f\\ResourcePart.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\6b2dfb9d5e4949b718ee78fa9415cabf37518e9447a2764ba224d240518b710f\\ResourcePart.cs",

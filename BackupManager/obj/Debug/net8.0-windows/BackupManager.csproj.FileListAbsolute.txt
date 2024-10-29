@@ -33,3 +33,4 @@ C:\Users\miche\Documents\Meus Programas\MeusProjetos\BackupManager\BackupManager
 C:\Users\miche\Documents\Meus Programas\MeusProjetos\BackupManager\BackupManager\bin\Debug\net8.0-windows\Images\93634.png
 C:\Users\miche\Documents\Meus Programas\MeusProjetos\BackupManager\BackupManager\bin\Debug\net8.0-windows\Images\Background.png
 C:\Users\miche\Documents\Meus Programas\MeusProjetos\BackupManager\BackupManager\obj\Debug\net8.0-windows\BackupManager_Content.g.cs
+C:\Users\miche\Documents\Meus Programas\MeusProjetos\BackupManager\BackupManager\bin\Debug\net8.0-windows\Images\ai-8802304_1280.png

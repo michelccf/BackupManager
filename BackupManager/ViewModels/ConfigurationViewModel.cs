@@ -8,7 +8,8 @@ using Microsoft.WindowsAPICodePack.Dialogs;
 using Newtonsoft.Json;
 using BackupManager.Views;
 using BackupManager.Configuration.Interfaces;
-
+using System.Windows.Threading;
+using System.Windows;
 
 namespace BackupManager.ViewModels
 {
@@ -20,6 +21,7 @@ namespace BackupManager.ViewModels
         public ICommand SelectBackupPathCommand { get; }
         public ICommand ReturnCommand { get; set; }
         public ICommand DeleteIndexCommand { get; set; }
+        public ICommand DefineTimeCommand { get; set; }
 
         private readonly INavigationService _navigationService;
 
@@ -29,7 +31,51 @@ namespace BackupManager.ViewModels
         private string _newName;
         private string _newGamePath;
         private string _newBackupPath;
+        private bool _horas;
+        private bool _minutos;
+        private bool _segundos;
+        private int _tempo;
         private Game _selectedGame;
+
+        public bool Horas
+        {
+            get { return _horas; }
+            set
+            {
+                _horas = value;
+                OnPropertyChanged(nameof(Horas));
+            }
+        }
+
+        public bool Minutos
+        {
+            get { return _minutos; }
+            set
+            {
+                _minutos = value;
+                OnPropertyChanged(nameof(Minutos));
+            }
+        }
+
+        public bool Segundos
+        {
+            get { return _segundos; }
+            set
+            {
+                _segundos = value;
+                OnPropertyChanged(nameof(Segundos));
+            }
+        }
+
+        public int Tempo
+        {
+            get { return _tempo; }
+            set
+            {
+                _tempo = value;
+                OnPropertyChanged(nameof(Tempo));
+            }
+        }
 
         public string NewName
         {
@@ -80,8 +126,18 @@ namespace BackupManager.ViewModels
             SelectBackupPathCommand = new RelayCommand(ExecuteActionSelectBackupPath);
             ReturnCommand = new RelayCommand(ExecuteActionReturn);
             DeleteIndexCommand = new RelayCommand(ExecuteActionDeleteIndex);
+            DefineTimeCommand = new RelayCommand(ExecuteActionDefineTime);
             GetPropertiesFromJsonConfig();
+            if (!Horas && !Minutos && !Segundos)
+            {
+                Horas = true;
+            }
 
+        }
+
+        private void ExecuteActionDefineTime()
+        {
+            DefineTimeOnly();
         }
 
         private void ExecuteActionDeleteIndex()
@@ -90,6 +146,11 @@ namespace BackupManager.ViewModels
             {
                 Games.Remove(SelectedIndex);
                 GenerateJson();
+                SendMessageBox("Elemento removido com sucesso!");
+            }
+            else 
+            {
+                SendMessageBox("Clique em um elemento da lista!");
             }
         }
 
@@ -101,22 +162,34 @@ namespace BackupManager.ViewModels
         private void ExecuteActionSelectBackupPath()
         {
                 NewBackupPath = OpenFileDialog();
-                GenerateJson();
         }
 
         public void ExecuteActionAddGame()
         {
-            if(string.IsNullOrEmpty(NewName)  || string.IsNullOrEmpty(NewGamePath))
-             return; 
+            if (string.IsNullOrEmpty(NewName) || string.IsNullOrEmpty(NewGamePath) || string.IsNullOrEmpty(NewBackupPath))
+            {
+                SendMessageBox("Defina o nome, caminho do arquivo origem e o caminho destino.");
+                return;
+            }
+
+            if (Tempo == 0 || Tempo == null)
+            {
+                SendMessageBox("Defina o valor de tempo.");
+                return;
+            }
+            
 
             Game x = new Game();
             x.Name = NewName;
             x.Path = NewGamePath;
+            x.Pathbackup = NewBackupPath;
             Games.Add(x);
 
             NewName = string.Empty;
             NewGamePath = string.Empty;
+            NewBackupPath = string.Empty;
             GenerateJson();
+            SendMessageBox("Item adicionado com sucesso!");
         }
 
         public void ExecuteActionSelectGamePath()
@@ -153,7 +226,10 @@ namespace BackupManager.ViewModels
             if (json != null)
             {
                 Games = new ObservableCollection<Game>(json.Games);
-                NewBackupPath = json.BackupPath;
+                Horas = json.Horas == true ? true : false;
+                Minutos = json.Minutos == true ? true : false;
+                Segundos = json.Segundos == true ? Segundos = true : false;
+                Tempo = json.Tempo;
             }
         }
 
@@ -162,9 +238,7 @@ namespace BackupManager.ViewModels
             string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name.Split('\\').LastOrDefault();
             if (File.Exists(Constants.JsonPath.Replace("%User%", userName))) 
             {
-                
                 string json = File.ReadAllText(Constants.JsonPath.Replace("%User%", userName));
-
                 JsonConfig objeto = JsonConvert.DeserializeObject<JsonConfig>(json);
                 return objeto;
             }
@@ -173,22 +247,41 @@ namespace BackupManager.ViewModels
             
         }
 
-        private void GenerateJson()
+        private void DefineTimeOnly()
         {
-            JsonConfig jsonConfig = new JsonConfig();
-            jsonConfig.Games = Games.ToList();
-            jsonConfig.BackupPath = NewBackupPath;
-            string json = JsonConvert.SerializeObject(jsonConfig, Formatting.Indented);
+            JsonConfig json = DesserializerJsonConfig();
+            json.Horas = Horas;
+            json.Minutos = Minutos;
+            json.Segundos = Segundos;
+            json.Tempo = Tempo;
+            GenerateJson(json);
+            SendMessageBox("Tempo definido com sucesso!");
+        }
 
-            string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name.Split('\\').LastOrDefault();
+        private void GenerateJson(JsonConfig jsonConfig = null)
+        {
+            if (jsonConfig == null)
+            {
+                jsonConfig = new JsonConfig();
+                jsonConfig.Games = Games.ToList();
+                string json = JsonConvert.SerializeObject(jsonConfig, Formatting.Indented);
+                // Salva o JSON em um arquivo
+                File.WriteAllText(Constants.JsonPath, json);
+            }
+            else 
+            {
 
-            // Salva o JSON em um arquivo
-            File.WriteAllText(Constants.JsonPath.Replace("%User%", userName), json);
+            }
         }
 
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private void SendMessageBox(string message)
+        {
+            MessageBox.Show(message, "Erro", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }
