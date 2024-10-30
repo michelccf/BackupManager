@@ -264,6 +264,10 @@ namespace BackupManager.ViewModels
             {
                 jsonConfig = new JsonConfig();
                 jsonConfig.Games = Games.ToList();
+                jsonConfig.Horas = Horas;
+                jsonConfig.Minutos = Minutos;
+                jsonConfig.Segundos = Segundos;
+                jsonConfig.Tempo = Tempo;
                 string json = JsonConvert.SerializeObject(jsonConfig, Formatting.Indented);
                 // Salva o JSON em um arquivo
                 File.WriteAllText(Constants.JsonPath, json);
